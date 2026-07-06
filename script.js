@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================================================
-       CONTACT FORM SUBMIT (SIMULATION)
+       CONTACT FORM SUBMIT (FORMSPREE)
        ========================================================================== */
     const contactForm = document.getElementById('contact-form');
     const formFeedback = document.getElementById('form-feedback');
@@ -216,25 +216,43 @@ document.addEventListener('DOMContentLoaded', () => {
         const originalBtnContent = submitBtn.innerHTML;
         submitBtn.innerHTML = 'Envoi en cours... <i class="fa-solid fa-spinner fa-spin"></i>';
         
-        // Simulate networking delay
-        setTimeout(() => {
-            // Restore button
+        fetch(contactForm.action, {
+            method: 'POST',
+            body: new FormData(contactForm),
+            headers: { 'Accept': 'application/json' }
+        })
+        .then(response => {
             submitBtn.disabled = false;
             submitBtn.innerHTML = originalBtnContent;
             
-            // Show success message
-            formFeedback.textContent = 'Merci ! Votre message a été envoyé avec succès. Je vous répondrai dans les plus brefs délais.';
-            formFeedback.className = 'form-feedback success';
+            if (response.ok) {
+                // Show success message
+                formFeedback.textContent = 'Merci ! Votre message a été envoyé avec succès. Je vous répondrai dans les plus brefs délais.';
+                formFeedback.className = 'form-feedback success';
+                
+                // Reset form
+                contactForm.reset();
+            } else {
+                formFeedback.textContent = "Une erreur s'est produite. Merci de réessayer ou de m'écrire directement par email.";
+                formFeedback.className = 'form-feedback error';
+            }
             
-            // Reset form
-            contactForm.reset();
-            
-            // Hide feedback after 5 seconds
+            // Hide feedback after 6 seconds
             setTimeout(() => {
                 formFeedback.className = 'form-feedback hidden';
             }, 6000);
+        })
+        .catch(() => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnContent;
             
-        }, 1500);
+            formFeedback.textContent = "Une erreur s'est produite. Merci de réessayer ou de m'écrire directement par email.";
+            formFeedback.className = 'form-feedback error';
+            
+            setTimeout(() => {
+                formFeedback.className = 'form-feedback hidden';
+            }, 6000);
+        });
     });
 
     /* ==========================================================================
