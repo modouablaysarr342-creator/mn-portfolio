@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio 2026 | Designer Graphique</title>
+    <meta name="description" content="Portfolio de design graphique présentant mes travaux de création de logos, d'identité visuelle et d'affiches créatives pour l'année 2026.">
+    <!-- Google Fonts: Outfit for clean, modern geometry -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;600;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome for UI icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header id="main-header" class="header-floating">
+        <div class="header-container">
+            <a href="#" class="logo-text" id="header-logo">
+                P<span>.</span>
+            </a>
+            
+            <nav id="navbar">
+                <ul class="nav-links">
+                    <li><a href="#hero" class="nav-link active">Accueil</a></li>
+                    <li><a href="#about" class="nav-link">À propos</a></li>
+                    <li><a href="#logos-section" class="nav-link">Logos</a></li>
+                    <li><a href="#branding-section" class="nav-link">Identité</a></li>
+                    <li><a href="#visuels-section" class="nav-link">Visuels</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button id="theme-toggle" aria-label="Changer de thème" class="btn-icon">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="mobile-menu-toggle" aria-label="Ouvrir le menu" class="btn-icon mobile-only">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-drawer" class="mobile-drawer">
+        <button id="mobile-drawer-close" aria-label="Fermer le menu" class="btn-icon">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <ul class="drawer-links">
+            <li><a href="#hero" class="drawer-link">Accueil</a></li>
+            <li><a href="#about" class="drawer-link">À propos</a></li>
+            <li><a href="#logos-section" class="drawer-link">Logos</a></li>
+            <li><a href="#branding-section" class="drawer-link">Identité</a></li>
+            <li><a href="#visuels-section" class="drawer-link">Visuels</a></li>
+            <li><a href="#contact" class="drawer-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section section-mint-bg">
+        <!-- Floating abstract shapes from PDF -->
+        <div class="decorations">
+            <div class="deco-square-solid"></div>
+            <div class="deco-square-outline"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="outline-text">Port</span><span class="solid-text">folio</span>
+                <span class="hero-year">2026</span>
+            </h1>
+            <p class="hero-subtitle">Design Graphique & Direction Artistique</p>
+            <div class="scroll-indicator" id="hero-scroll-btn">
+                <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+                <span class="scroll-text">Faire défiler</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section section-mint-bg">
+        <div class="container grid-about">
+            <div class="about-left">
+                <h2 class="about-title-large">Portfolio</h2>
+                <h3 class="about-subtitle-large">design graphique</h3>
+                <!-- Styled squares from PDF page 2 -->
+                <div class="about-visual-deco">
+                    <div class="mini-square-solid"></div>
+                    <div class="mini-square-outline"></div>
+                </div>
+            </div>
+            
+            <div class="about-right">
+                <p class="about-bio">
+                    Bonjour, je suis un designer graphique en pleine exploration. Passionné par l’impact visuel et la narration, je conçois le design comme un langage universel. Ce portfolio reflète mon parcours et ma volonté d’expérimenter mes compétences pour traduire une idée en un visuel impactant.
+                </p>
+                
+                <div class="about-skills">
+                    <h4 class="skills-title">Mes Outils Créatifs</h4>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-tooltip="Adobe Photoshop">
+                            <span class="skill-letter">Ps</span>
+                            <span class="skill-name">Photoshop</span>
+                        </div>
+                        <div class="skill-card" data-tooltip="Adobe Illustrator">
+                            <span class="skill-letter">Ai</span>
+                            <span class="skill-name">Illustrator</span>
+                        </div>
+                        <div class="skill-card" data-tooltip="Adobe InDesign">
+                            <span class="skill-letter">Id</span>
+                            <span class="skill-name">InDesign</span>
+                        </div>
+                        <div class="skill-card" data-tooltip="Créations Originales">
+                            <span class="skill-logo"><i class="fa-solid fa-bezier-curve"></i></span>
+                            <span class="skill-name">Art</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Section Separator -->
+    <section id="logos-intro" class="section-separator section-mint-bg">
+        <h2 class="separator-title outline-solid-mix">
+            <span class="outline">L</span><span class="solid">O</span><span class="outline">G</span><span class="solid">O</span>
+        </h2>
+    </section>
+
+    <!-- Logos Gallery Section -->
+    <section id="logos-section" class="logos-section section-white-bg">
+        <div class="container">
+            <div class="section-header text-center">
+                <h3 class="section-title">Créations de Logos</h3>
+                <p class="section-subtitle">Sélection de logos conçus pour diverses marques et industries.</p>
+            </div>
+            
+            <div class="logos-grid" id="logos-gallery">
+                <!-- Logo 1 -->
+                <div class="logo-item card-hover" data-id="1">
+                    <div class="logo-image-wrapper">
+                        <img src="assets/logos/logo_1.png" alt="Logo Kikiss" loading="lazy">
+                    </div>
+                    <div class="logo-info">
+                        <h4 class="logo-name">Kikiss</h4>
+                        <span class="logo-category">Mode & Vêtements</span>
+                    </div>
+                </div>
+                <!-- Logo 2 -->
+                <div class="logo-item card-hover" data-id="2">
+                    <div class="logo-image-wrapper">
+                        <img src="assets/logos/logo_2.png" alt="Logo Nayaha" loading="lazy">
+                    </div>
+                    <div class="logo-info">
+                        <h4 class="logo-name">Nayaha</h4>
+                        <span class="logo-category">Calligraphie & Boutique</span>
+                    </div>
+                </div>
+                <!-- Logo 3 -->
+                <div class="logo-item card-hover" data-id="3">
+                    <div class="logo-image-wrapper">
+                        <img src="assets/logos/logo_3.png" alt="Logo Nasrou" loading="lazy">
+                    </div>
+                    <div class="logo-info">
+                        <h4 class="logo-name">Nasrou</h4>
+                        <span class="logo-category">Branding Moderne</span>
+                    </div>
+                </div>
+                <!-- Logo 4 -->
+                <div class="logo-item card-hover" data-id="4">
+                    <div class="logo-image-wrapper">
+                        <img src="assets/logos/logo_4.png" alt="Logo Laytaay" loading="lazy">
+                    </div>
+                    <div class="logo-info">
+                        <h4 class="logo-name">Laytaay</h4>
+                        <span class="logo-category">Agence Créative</span>
+                    </div>
+                </div>
+                <!-- Logo 5 -->
+                <div class="logo-item card-hover" data-id="5">
+                    <div class="logo-image-wrapper">
+                        <img src="assets/logos/logo_5.png" alt="Logo Voyage" loading="lazy">
+                    </div>
+                    <div class="logo-info">
+                        <h4 class="logo-name">Voyage</h4>
+                        <span class="logo-category">Tourisme & Évasion</span>
+                    </div>
+                </div>
+                <!-- Logo 6 -->
+                <div class="logo-item card-hover" data-id="6">
+                    <div class="logo-image-wrapper">
+                        <img src="assets/logos/logo_6.png" alt="Logo R" loading="lazy">
+                    </div>
+                    <div class="logo-info">
+                        <h4 class="logo-name">R</h4>
+                        <span class="logo-category">Monogramme Minimaliste</span>
+                    </div>
+                </div>
+                <!-- Logo 7 -->
+                <div class="logo-item card-hover" data-id="7">
+                    <div class="logo-image-wrapper">
+                        <img src="assets/logos/logo_7.png" alt="Logo Tambeats" loading="lazy">
+                    </div>
+                    <div class="logo-info">
+                        <h4 class="logo-name">Tambeats</h4>
+                        <span class="logo-category">Musique & Production</span>
+                    </div>
+                </div>
+                <!-- Logo 8 -->
+                <div class="logo-item card-hover" data-id="8">
+                    <div class="logo-image-wrapper">
+                        <img src="assets/logos/logo_8.png" alt="Logo Élite Immobilier" loading="lazy">
+                    </div>
+                    <div class="logo-info">
+                        <h4 class="logo-name">Élite Immobilier</h4>
+                        <span class="logo-category">Immobilier de Prestige</span>
+                    </div>
+                </div>
+                <!-- Logo 9 -->
+                <div class="logo-item card-hover" data-id="9">
+                    <div class="logo-image-wrapper">
+                        <img src="assets/logos/logo_9.png" alt="Logo Camssas Agency" loading="lazy">
+                    </div>
+                    <div class="logo-info">
+                        <h4 class="logo-name">Camssas Agency</h4>
+                        <span class="logo-category">Conseil & Communication</span>
+                    </div>
+                </div>
+                <!-- Logo 10 -->
+                <div class="logo-item card-hover" data-id="10">
+                    <div class="logo-image-wrapper">
+                        <img src="assets/logos/logo_10.png" alt="Logo Otaku Club" loading="lazy">
+                    </div>
+                    <div class="logo-info">
+                        <h4 class="logo-name">Otaku Club</h4>
+                        <span class="logo-category">Culture & Événementiel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branding / Identity Section -->
+    <section id="branding-section" class="branding-section section-white-bg">
+        <div class="container">
+            <div class="section-header text-center">
+                <h3 class="section-title">Identité Visuelle & Chartes</h3>
+                <p class="section-subtitle">Études de couleurs, palettes CMJN et RVB pour les projets phares.</p>
+            </div>
+            
+            <div class="branding-display card-hover">
+                <div class="branding-image-container">
+                    <img src="assets/branding.png" alt="Chartes graphiques et palettes couleur" class="branding-img" loading="lazy">
+                </div>
+                <div class="branding-details">
+                    <h4 class="branding-details-title">Directives de Marque</h4>
+                    <p class="branding-details-text">
+                        Conception méticuleuse des palettes colorimétriques. Chaque projet est développé avec des spécifications précises pour les profils CMJN (impression papier) et RVB (affichage numérique), garantissant une cohérence visuelle parfaite sur tous les supports.
+                    </p>
+                    <div class="branding-brands-list">
+                        <span class="brand-badge badge-elite">Élite Immobilier</span>
+                        <span class="brand-badge badge-laytaay">Laytaay</span>
+                        <span class="brand-badge badge-voyage">Voyage</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visuels Section Separator -->
+    <section id="visuels-intro" class="section-separator section-mint-bg">
+        <h2 class="separator-title outline-solid-mix">
+            <span class="solid">V</span><span class="outline">I</span><span class="solid">S</span><span class="outline">U</span><span class="solid">E</span><span class="outline">L</span><span class="solid">S</span>
+        </h2>
+    </section>
+
+    <!-- Posters Gallery Section -->
+    <section id="visuels-section" class="visuels-section section-white-bg">
+        <div class="container">
+            <div class="section-header text-center">
+                <h3 class="section-title">Affiches & Posters</h3>
+                <p class="section-subtitle">Projets d'illustration, créations éditoriales et visuels promotionnels.</p>
+            </div>
+            
+            <div class="posters-grid" id="posters-gallery">
+                <!-- Poster 1 -->
+                <div class="poster-item card-hover" data-index="0" data-src="assets/posters/poster_1.png" data-title="Ousmane Dembélé - PSG" data-desc="Affiche hommage sportive célébrant la performance du joueur du Paris Saint-Germain avec les statistiques clés.">
+                    <div class="poster-image-wrapper">
+                        <img src="assets/posters/poster_1.png" alt="Poster Ousmane Dembélé" loading="lazy">
+                    </div>
+                    <div class="poster-overlay">
+                        <div class="poster-text">
+                            <h4 class="poster-name">Ousmane Dembélé</h4>
+                            <span class="poster-cat">Affiche Sportive / PSG</span>
+                            <span class="btn-view"><i class="fa-solid fa-expand"></i> Voir</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Poster 2 -->
+                <div class="poster-item card-hover" data-index="1" data-src="assets/posters/poster_2.png" data-title="Match Day - Sénégal" data-desc="Visuel d'événement sportif pour l'équipe nationale de football du Sénégal, célébrant l'esprit d'équipe.">
+                    <div class="poster-image-wrapper">
+                        <img src="assets/posters/poster_2.png" alt="Poster Match Day Sénégal" loading="lazy">
+                    </div>
+                    <div class="poster-overlay">
+                        <div class="poster-text">
+                            <h4 class="poster-name">Match Day Sénégal</h4>
+                            <span class="poster-cat">Événement Sport / Lion de la Téranga</span>
+                            <span class="btn-view"><i class="fa-solid fa-expand"></i> Voir</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Poster 3 -->
+                <div class="poster-item card-hover" data-index="2" data-src="assets/posters/poster_3.png" data-title="Game Over - Basketball" data-desc="Affiche stylisée de basketball dans une ambiance sombre, dramatique et dynamique.">
+                    <div class="poster-image-wrapper">
+                        <img src="assets/posters/poster_3.png" alt="Poster Game Over Basketball" loading="lazy">
+                    </div>
+                    <div class="poster-overlay">
+                        <div class="poster-text">
+                            <h4 class="poster-name">Game Over</h4>
+                            <span class="poster-cat">Illustration Art / Sport</span>
+                            <span class="btn-view"><i class="fa-solid fa-expand"></i> Voir</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Poster 4 -->
+                <div class="poster-item card-hover" data-index="3" data-src="assets/posters/poster_4.png" data-title="Un Combat" data-desc="Affiche cinématographique conceptuelle 'Un combat, un empire à conquérir' en noir et blanc contrasté.">
+                    <div class="poster-image-wrapper">
+                        <img src="assets/posters/poster_4.png" alt="Poster Un Combat" loading="lazy">
+                    </div>
+                    <div class="poster-overlay">
+                        <div class="poster-text">
+                            <h4 class="poster-name">Un Combat</h4>
+                            <span class="poster-cat">Concept Cinéma / Drame</span>
+                            <span class="btn-view"><i class="fa-solid fa-expand"></i> Voir</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Poster 5 -->
+                <div class="poster-item card-hover" data-index="4" data-src="assets/posters/poster_5.png" data-title="Snowfall - Franklin Saint" data-desc="Poster dramatique pour la série Snowfall, se focalisant sur le protagoniste Franklin Saint dans une composition de crime et d'échecs.">
+                    <div class="poster-image-wrapper">
+                        <img src="assets/posters/poster_5.png" alt="Poster Snowfall Franklin" loading="lazy">
+                    </div>
+                    <div class="poster-overlay">
+                        <div class="poster-text">
+                            <h4 class="poster-name">Snowfall</h4>
+                            <span class="poster-cat">Affiche Série / Fan Art</span>
+                            <span class="btn-view"><i class="fa-solid fa-expand"></i> Voir</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Poster 6 -->
+                <div class="poster-item card-hover" data-index="5" data-src="assets/posters/poster_6.png" data-title="Le Projet - P.R.O.S" data-desc="Visuel social et politique d'inspiration sénégalaise 'Le projet notre espoir', mettant en valeur le lion et le renouveau culturel.">
+                    <div class="poster-image-wrapper">
+                        <img src="assets/posters/poster_6.png" alt="Poster Le Projet PROS" loading="lazy">
+                    </div>
+                    <div class="poster-overlay">
+                        <div class="poster-text">
+                            <h4 class="poster-name">Le Projet</h4>
+                            <span class="poster-cat">Design Culturel / Sénégal</span>
+                            <span class="btn-view"><i class="fa-solid fa-expand"></i> Voir</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-mint-bg">
+        <div class="container container-narrow">
+            <div class="section-header text-center">
+                <h3 class="section-title">Me Contacter</h3>
+                <p class="section-subtitle">Un projet créatif ? Une opportunité ? Discutons-en ensemble.</p>
+            </div>
+            
+            <form id="contact-form" class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contact-name">Votre Nom</label>
+                        <input type="text" id="contact-name" name="name" required placeholder="Ex. Jean Dupont">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Votre Email</label>
+                        <input type="email" id="contact-email" name="email" required placeholder="Ex. jean@example.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="contact-subject">Objet du message</label>
+                    <input type="text" id="contact-subject" name="subject" required placeholder="Ex. Demande de devis logo">
+                </div>
+                <div class="form-group">
+                    <label for="contact-message">Votre Message</label>
+                    <textarea id="contact-message" name="message" rows="6" required placeholder="Décrivez votre projet en quelques mots..."></textarea>
+                </div>
+                
+                <div class="form-actions text-center">
+                    <button type="submit" id="contact-submit" class="btn-primary">
+                        Envoyer le message <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div id="form-feedback" class="form-feedback hidden"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="main-footer" class="main-footer">
+        <div class="container grid-footer">
+            <div class="footer-left">
+                <span class="footer-logo">P.</span>
+                <p class="footer-tagline">Créer des identités visuelles fortes et des designs impactants.</p>
+            </div>
+            <div class="footer-right">
+                <p class="copyright">&copy; 2026. Tous droits réservés.</p>
+                <p class="design-by">Conçu et développé pour célébrer la créativité graphique.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Lightbox Modal -->
+    <div id="lightbox">
+        <button id="lightbox-close" class="lightbox-btn" aria-label="Fermer le visualiseur"><i class="fa-solid fa-xmark"></i></button>
+        <button id="lightbox-prev" class="lightbox-btn" aria-label="Image précédente"><i class="fa-solid fa-chevron-left"></i></button>
+        <button id="lightbox-next" class="lightbox-btn" aria-label="Image suivante"><i class="fa-solid fa-chevron-right"></i></button>
+        
+        <div class="lightbox-content">
+            <div class="lightbox-img-wrapper">
+                <img id="lightbox-img" src="" alt="Agrandissement affiche">
+            </div>
+            <div class="lightbox-meta">
+                <h4 id="lightbox-title">Titre Affiche</h4>
+                <p id="lightbox-desc">Description de l'affiche et contexte créatif.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
